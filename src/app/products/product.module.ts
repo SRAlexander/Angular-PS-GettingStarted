@@ -7,6 +7,7 @@ import { ProductGuardService } from './product-guard.service';
 import { ProductDetailComponent } from './product-detail.component';
 import { ConvertToSpacesPipe } from '../shared/convert-to-spaces.pipe';
 import { StarComponent } from '../shared/star.component';
+import { ProductService } from './product.service';
 
 @NgModule({
   imports: [
@@ -22,6 +23,10 @@ import { StarComponent } from '../shared/star.component';
       ProductListComponent,
       ProductDetailComponent,
       ConvertToSpacesPipe
+  ],
+  providers: [
+    ProductService,
+    ProductGuardService
   ]
 })
 export class ProductModule { }

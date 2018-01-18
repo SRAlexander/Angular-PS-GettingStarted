@@ -13,6 +13,7 @@ import { ProductModule } from './products/product.module';
     WelcomeComponent
   ],
   imports: [
+    ProductModule,
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot([
@@ -20,7 +21,7 @@ import { ProductModule } from './products/product.module';
         {path: '', redirectTo: 'welcome', pathMatch: 'full'},
         {path: '**', redirectTo:'welcome', pathMatch: 'full'}
     ], { useHash : false }),
-    ProductModule
+    
   ],
   bootstrap: [AppComponent]
 })
